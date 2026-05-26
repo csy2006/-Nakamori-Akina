@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古海军上将 & Nakamori Akina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/1111111.css">
+    <script type="" src="./js/1111111.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <h1>Akina Nakamori</h1>
+                    <span>©蒙古海军上将保留所有权利.</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">关于明菜</a></li>
+                    <li><a href="#music">Akina的红色皮鞋 · 歌单</a></li>
+                    <li><a href="#gallery">明菜肖像</a></li>
+                    <li><a href="#news">新闻动态</a></li>
+                    <li><a href="#fanclub">留言专区</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- head -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">中森明菜</h1>
+                <p class="hero-subtitle">日本传奇歌姬 · 元祖歌姬</p>
+                <p class="hero-description">20世纪80年代日本最具代表性的流行女歌手之一</p>
+                <p class="hero-description">以其独特的嗓音和深情的演唱风格闻名。</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-secondary">了解明菜</a>
+                    <a href="#music" class="btn btn-primary">欣赏音乐</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="./‘uploads/主页大图.webp" alt="中森明菜">
+        </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">关于中森明菜</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>中森明菜（Nakamori Akina），1965年7月13日出生于日本东京都大田区，是炫晔最爱的日本著名的歌手和演员。</p>
+                    <p>她是20世纪80年代日本最具代表性的流行女歌手之一，以其独特的嗓音和深情的演唱风格闻名。1982年出道以来，中森明菜创造了多项记录，包括连续两年蝉联日本唱片大赏。</p>
+                    <p>她的音乐风格多样，从流行、摇滚到抒情歌曲都能完美驾驭，代表作品包括《DESIRE -情热-》、《难破船》、《禁区》等。</p>
+                    <p>近年来，中森明菜依然活跃在乐坛。2022年宣布回归乐坛，成立新的个人事务所HZ VILLAGE。2025年举办了花甲诞辰演唱会并于2026年1月发行现场影碟。</p>
+                </div>
+            </div>
+            <div class="about-image">
+                <a href="https://www.baike.com/wikiid/7245974512294068284" target="_blank"><img src="./images/4.jpg" alt="中森明菜"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 音乐作品 -->
+    <section class="section-dark" id="music">
+        <div class="container">
+            <h2 class="section-title">Akina的红色皮鞋 · 歌单</h2>
+            <div class="music-player-container">
+                <div class="player-header">
+                    <div class="album-art">
+                        <img src="./images/微信图片_20260117194713_568_346.jpg" alt="专辑封面">
+                    </div>
+                    <div class="song-info">
+                        <h3>Slow motion</h3>
+                        <p>中森明菜 · 2012 Remastered</p>
+                    </div>
+                </div>
+                
+                <div class="player-controls">
+                    <div class="control-buttons">
+                        <button class="control-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                        <button class="control-btn play-btn" id="play-btn"><i class="fas fa-play"></i></button>
+                        <button class="control-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-down"></i>
+                        <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.1" value="0.7">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <span class="time" id="current-time">0:00</span>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span class="time" id="duration">0:00</span>
+                </div>
+                
+                <div class="playlist">
+                    <h3>播放列表</h3>
+
+                    <div class="playlist-item active" data-song-id="song1">
+                        <img src="./images/微信图片_20260117194713_568_346.jpg" alt="Slow motion">
+                        <div class="playlist-item-info">
+                            <h4>Slow motion (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:05</span>
+                        <audio id="song1" preload="metadata">
+                            <source src="music/SLOW_MOTION_(2012_Remastered)_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item active" data-song-id="song2">
+                        <img src="./images/微信图片_20260117194713_568_346.jpg" alt="Downtown Story">
+                        <div class="playlist-item-info">
+                            <h4>Downtown Story (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:13</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Downtown Story 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item active" data-song-id="song3">
+                        <img src="./images/微信图片_20260117194713_568_346.jpg" alt="Bon_Voyage">
+                        <div class="playlist-item-info">
+                            <h4>Bon_Voyage (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">3:46</span>
+                        <audio id="song1" preload="metadata">
+                            <source src="music/Bon_Voyage_(2012_Remastered)_-_中森明菜.flac" type="audio/flac">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song4">
+                        <img src="./images/shojo A.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Shoio A (2014 Remastered)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">3:33</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/shoio A_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song5">
+                        <img src="./images/Märchen Location (2012 Remastered).jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Märchen Location (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:37</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Märchen Location 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song6">
+                        <img src="./images/select love.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Second Love (2014 Remastered)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:23</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Second Love 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song7">
+                        <img src="./images/22.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>1/2の神话(ライヴ・ヴァージョン)</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">3:47</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/2の神话ライヴ・ヴァージョン-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song8">
+                        <img src="./images/8-9.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>瑠璃色の夜へ</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">3:40</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/瑠璃色の夜へ_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song9">
+                        <img src="./images/8-9.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>目をとじて小旅行</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:36</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/目をとじて小旅行イクスカーション-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song10">
+                        <img src="./images/10.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Mon Amor: Glass Ni Hanbun No Tasogare</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:11</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Mon Amor Glass Ni Hanbun No Tasogare-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song11">
+                        <img src="./images/11.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>禁区 (2022 Lacquer Master Sound)</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">3:46</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/禁区 2022 Lacquer Master Sound-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song12">
+                        <img src="./images/12.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>北ウイング (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:39</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/北ウイング 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song13">
+                        <img src="./images/12.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>涙の形のイヤリング (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:27</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/涙の形のイヤリング 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song14">
+                        <img src="./images/14.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Southern Wind</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">3:52</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/SOUTHERN WIND-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song15">
+                        <img src="./images/15.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>十戒 (1984) (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">3:35</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/十戒 1984 [Instrumental] [2014 Remaster]-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song16">
+                        <img src="./images/16.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Kazarijanainoyo Namidaha (2012 New Mix)</h4>
+                            <p>中森明菜 · 2012 New Mix</p>
+                        </div>
+                        <span class="time">4:14</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Kazarijanainoyo Namidaha 2012 New Mix-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song17">
+                        <img src="./images/17.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Meu amor e... (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">3:52</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Meu amor e.. Instrumental [2014 Remaster]-Akina Nakamori.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song18">
+                        <img src="./images/18.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>SAND BEIGE~砂漠へ</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:37</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/SAND BEIGE -砂漠へ--中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song19">
+                        <img src="./images/SO_Long.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>UNSTEADY LOVE (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:31</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/UNSTEADY LOVE 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song20">
+                        <img src="./images/SO_Long.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>SO_LONG</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:58</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/SO_LONG_-_中森明菜.flac" type="audio/flac">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song21">
+                        <img src="./images/SO_Long.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>APRIL STARS (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">5:05</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/APRIL STARS 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song22">
+                        <img src="./images/22-27.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>ENDLESS (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:22</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/ENDLESS 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song23">
+                        <img src="./images/22-27.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Allegro vivace (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">5:01</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Allegro vivace 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song24">
+                        <img src="./images/22-27.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Kanashii Romance (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:14</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Kanashii Romance 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song25">
+                        <img src="./images/22-27.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Pierce (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">3:59</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Pierce 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song26">
+                        <img src="./images/22-27.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>BLUE OCEAN (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">3:59</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/BLUE OCEAN 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song27">
+                        <img src="./images/22-27.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>STAR PILOT (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">4:03</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/STAR PILOT 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song28">
+                        <img src="./images/28.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>SOLITUDE (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:20</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/SOLITUDE 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song29">
+                        <img src="./images/29-30.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>DESIRE -jounetsu- (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:24</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/DESIRE -jounetsu- 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song30">
+                        <img src="./images/29-30.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>LA BOHEME (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:39</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/LA BOHEME 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song31">
+                        <img src="./images/31.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Gypsy Queen (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:27</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Gypsy Queen 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song32">
+                        <img src="./images/fin.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Fin (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:10</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/Fin_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song33">
+                        <img src="./images/fin.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>危ないMON AMOUR (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remastered</p>
+                        </div>
+                        <span class="time">4:43</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/危ないMON AMOUR 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song34">
+                        <img src="./images/34.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>OH_NO,OH_YES!</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:47</span>
+                        <audio id="song4" preload="metadata">
+                            <source src="music/OH_NO,OH_YES!_-_中森明菜.flac" type="audio/flac">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song35">
+                        <img src="./images/約束_(约定).jpg" alt="約束_(约定)">
+                        <div class="playlist-item-info">
+                            <h4>約束_(约定)</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:05</span>
+                        <audio id="song1" preload="metadata">
+                            <source src="music/約束_(约定)_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song36">
+                        <img src="./images/36.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>赤のエナメル (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remaster</p>
+                        </div>
+                        <span class="time">4:23</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/赤のエナメル (2012 Remastered) - 中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song37">
+                        <img src="./images/約束_(约定).jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>ミック.ジャガーに微笑みを</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:44</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/ミック.ジャガーに微笑みを_-_中森明菜.flac" type="audio/flac">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song38">
+                        <img src="./images/38.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>TANGO NOIR (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:09</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/TANGO NOIR 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song39">
+                        <img src="./images/blonde.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>BLONDE (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">3:53</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/BLONDE_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song40">
+                        <img src="./images/40.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>MODERN WOMAN: FEMME D'AJOURD'HUI (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remaster</p>
+                        </div>
+                        <span class="time">4:12</span>
+                        <audio id="song2" preload="metadata">
+                            <source src="music/MODERN WOMAN FEMME D'AJOURD'HUI 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song41">
+                        <img src="./images/nanpochuan.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>难破船 (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster/p>
+                        </div>
+                        <span class="time">4:27</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/难破船_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song42">
+                        <img src="./images/42.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>AL-MAUJ (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:06</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/AL-MAUJ_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song43">
+                        <img src="./images/43.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>FIRE STARTER (2012 Remastered)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:10</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/FIRE STARTER 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song44">
+                        <img src="./images/44.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>TATTO (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">3:57</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/TATTOO_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song45">
+                        <img src="./images/45.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>I MISSED "THE SHOCK" (我已错过这次“冲击”) (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:10</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/I_MISSED_“THE_SHOCK__(2014_Remaster)_-_中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song46">
+                        <img src="./images/46.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>LIAR (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:32</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/LIAR 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song47">
+                        <img src="./images/47-48.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Sayonara Ja Owaranai (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remaster</p>
+                        </div>
+                        <span class="time">3:41</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/Sayonara Ja Owaranai 2012 Remastered-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song48">
+                        <img src="./images/47-48.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Standing In Blue (2012 Remastered)</h4>
+                            <p>中森明菜 · 2012 Remastered</p>
+                        </div>
+                        <span class="time">5:31</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/Standing In Blue 2012 Remastered-中森明菜.flac" type="audio/flac">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song49">
+                        <img src="./images/49-50.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Dear Friend (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:40</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/Dear Friend 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song50">
+                        <img src="./images/49-50.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>CARIBBEAN (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:35</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/CARIBBEAN-中森明菜.flac" type="audio/flac">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song51">
+                        <img src="./images/51-52.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>二人静-「天河伝説殺人事件」より (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">4:08</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/二人静-「天河伝説殺人事件」より 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song52">
+                        <img src="./images/51-52.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>忘れて... (2014 Remaster)</h4>
+                            <p>中森明菜 · 2014 Remaster</p>
+                        </div>
+                        <span class="time">2:49</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/忘れて.. 2014 Remaster-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song53">
+                        <img src="./images/53.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>愛撫</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">5:13</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/愛撫-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song54">
+                        <img src="./images/54-58.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Everlasting Love</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:52</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/Everlasting Love-中森明菜-2.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song55">
+                        <img src="./images/54-58.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>夜のどこかで~night shift~</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">5:50</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/夜のどこかで~night shift~-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song56">
+                        <img src="./images/54-58.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>今夜、流れ星</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:32</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/今夜、流れ星-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song57">
+                        <img src="./images/54-58.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>Good-bye My Tears</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:28</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/Good-bye My Tears-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <div class="playlist-item" data-song-id="song58">
+                        <img src="./images/54-58.jpg" alt="">
+                        <div class="playlist-item-info">
+                            <h4>It's brand new day</h4>
+                            <p>中森明菜</p>
+                        </div>
+                        <span class="time">4:54</span>
+                        <audio id="song3" preload="metadata">
+                            <source src="music/It's brand new day-中森明菜.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 视觉画廊 -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">视觉 · Nakamori Akina</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="./‘uploads/1985.webp" alt="中森明菜">
+                    <div class="gallery-caption">
+                        <h3>1985年演唱会</h3>
+                        <p>中森明菜在东京的经典演出</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/desire1.jpg" alt="中森明菜">
+                    <div class="gallery-caption">
+                        <h3>专辑封面拍摄</h3>
+                        <p>《DESIRE -情热-》专辑封面</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./‘uploads/OIP-C (1).jpg" alt="中森明菜">
+                    <div class="gallery-caption">
+                        <h3>杂志写真</h3>
+                        <p>1988年杂志专访</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./‘uploads/OIP-C (12).jpg" alt="中森明菜">
+                    <div class="gallery-caption">
+                        <h3>电视节目</h3>
+                        <p>1990年音乐节目演出</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./‘uploads/prize.jpg" alt="中森明菜">
+                    <div class="gallery-caption">
+                        <h3>颁奖典礼</h3>
+                        <p>日本唱片大赏领奖</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./‘uploads/OIP-C.jpg" alt="中森明菜">
+                    <div class="gallery-caption">
+                        <h3>近期活动</h3>
+                        <p>2025年生日演唱会</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section class="section-dark" id="news">
+        <div class="container">
+            <h2 class="section-title">新闻动态</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="./‘uploads/111.jpg" alt="新闻图片">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">2024年09月08日</div>
+                        <h3 class="news-title">11111111111</h3>
+                        <p class="news-excerpt">1111111111</p>
+                        <a href="https://www.douyin.com/user/MS4wLjABAAAAuR4hykUwJOraFhNvbZnRxXlYK9cAta6gpz4cIpjy1oU?from_tab_name=main&modal_id=7411962997092011273&vid=7590358321207611590" class="news-link" target="_blank">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="./‘uploads/555.jpg" alt="新闻图片">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">2024年10月02日</div>
+                        <h3 class="news-title">11111111111</h3>
+                        <p class="news-excerpt">1111111111</p>
+                        <a href="https://www.douyin.com/user/MS4wLjABAAAAuR4hykUwJOraFhNvbZnRxXlYK9cAta6gpz4cIpjy1oU?from_tab_name=main&modal_id=7421024792263855386&vid=7590358321207611590" class="news-link" target="_blank">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="./‘uploads/222.jpg" alt="新闻图片">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">2025年1月11日</div>
+                        <h3 class="news-title">11111111111</h3>
+                        <p class="news-excerpt">1111111111</p>
+                        <a href="https://www.douyin.com/user/MS4wLjABAAAAuR4hykUwJOraFhNvbZnRxXlYK9cAta6gpz4cIpjy1oU?from_tab_name=main&modal_id=7458686474754559247&vid=7590358321207611590" class="news-link" target="_blank">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 留言专区 -->
+    <section id="fanclub">
+        <div class="container">
+            <h2 class="section-title">留言专区</h2>
+            <div class="fan-section">
+                <div class="fan-form">
+                    <h3>留言板</h3>
+                    <form id="message-form">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" class="form-control" required maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言</label>
+                            <textarea id="message" class="form-control" required maxlength="500" placeholder="输入你的留言"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i>提交留言</button>
+                    </form>
+                </div>
+                <div class="fan-messages">
+                    <h3>最新留言</h3>
+                    <span class="message-count">共 <span id="message-count">0</span> 条留言</span>
+                    <div class="message-item">
+                        <div class="message-header">
+                            <span class="message-author">蒙古海军上将</span>
+                            <span class="message-date">2024年09月18日</span>
+                        </div>
+                        <p>一个普通的回校的早上#中森明菜</p>
+                    </div>
+                    <div class="message-item">
+                        <div class="message-header">
+                            <span class="message-author">蒙古海军上将</span>
+                            <span class="message-date">2025年01月01日</span>
+                        </div>
+                        <p>时间不语 #中森明菜 </p><p>在明菜的陪伴下度过了24年最灰暗的时光，希望以后每年亦是如此</p>
+                        
+                    </div>
+                    <div class="message-item">
+                        <div class="message-header">
+                            <span class="message-author">蒙古海军上将</span>
+                            <span class="message-date">2025年06月09日</span>
+                        </div>
+                        <p>此刻在我的世界，是我的黎明破晓.#中森明菜#高考</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>中森明菜</h3>
+                    <p>20世纪80年代最具代表性的流行女歌手之一。</p>
+                    <p><a href="https://www.baike.com/wikiid/7245974512294068284" target="_blank">链接</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于明菜</a></li>
+                        <li><a href="#music">Akina的红色皮鞋 · 歌单</a></li>
+                        <li><a href="#gallery">视觉 · Nakamori Akina</a></li>
+                        <li><a href="#news">新闻动态</a></li>
+                        <li><a href="#fanclub">留言专区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>关注蒙古海军上将</h3>
+                    <p>订阅我的抖音，获取明菜最新动态</p>
+                    <div class="social-links">
+                        <!-- <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a> -->
+                        <a href="https://www.douyin.com/user/MS4wLjABAAAAuR4hykUwJOraFhNvbZnRxXlYK9cAta6gpz4cIpjy1oU?from_tab_name=main&vid=7590358321207611590" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 中森明菜. 陈炫晔保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
